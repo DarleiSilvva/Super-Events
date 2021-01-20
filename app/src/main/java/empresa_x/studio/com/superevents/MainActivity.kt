@@ -70,12 +70,12 @@ class MainActivity : AppCompatActivity() {
         dialog = Dialog(this)
         recyclerView = findViewById<View>(R.id.recycleView) as RecyclerView
         uid = FirebaseAuth.getInstance().uid
-        constraintLayout1 = findViewById<View>(R.id.constraintLayout_PostsGerais) as ConstraintLayout
-        imageView1 = findViewById<View>(R.id.imageView_PostsGerais) as ImageView
-        textView1 = findViewById<View>(R.id.textview_PostsGerais) as TextView
-        constraintLayout2 = findViewById<View>(R.id.constraintLayout_MeusPosts) as ConstraintLayout
-        imageView2 = findViewById<View>(R.id.imageView_MeusPosts) as ImageView
-        textView2 = findViewById<View>(R.id.textview_MeusPosts) as TextView
+        constraintLayout1 = findViewById<View>(R.id.constraintLayout_Eventos) as ConstraintLayout
+        imageView1 = findViewById<View>(R.id.imageView_Eventos) as ImageView
+        textView1 = findViewById<View>(R.id.textview_Eventos) as TextView
+        constraintLayout2 = findViewById<View>(R.id.constraintLayout_MeusIngressos) as ConstraintLayout
+        imageView2 = findViewById<View>(R.id.imageView_MeusIngressos) as ImageView
+        textView2 = findViewById<View>(R.id.textview_MeusIngressos) as TextView
         textView1!!.setTextColor(resources.getColor(R.color.white))
         constraintLayout1!!.setBackgroundResource(R.drawable.fundo_button_ui_dark)
         imageView1!!.setImageResource(R.drawable.ic_calendario_dark)

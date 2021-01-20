@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fundo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/n2"
+    android:background="@drawable/fundo_new_ui_card"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/n5"
+    android:paddingEnd="@dimen/n5"
+    android:paddingBottom="@dimen/n15"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageEvento"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/n170"
+        android:layout_marginTop="@dimen/n5"
+        app:layout_constraintBottom_toTopOf="@id/conteudo_do_titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo_principal" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conteudo_do_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/n10"
+        android:layout_marginBottom="@dimen/n10"
+        app:layout_constraintBottom_toTopOf="@+id/conteudo_de_baixo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageEvento">
+
+        <TextView
+            android:id="@+id/evento_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/n30"
+            android:fontFamily="@font/electrolize"
+            android:hint="EVENTO"
+            android:paddingStart="@dimen/n10"
+            android:textColor="@color/vermelho3"
+            android:textColorHint="@color/vermelho3"
+            android:textSize="@dimen/ns23"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/conteudo_de_baixo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/descricao_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/n10"
+            android:layout_marginEnd="@dimen/n30"
+            android:fontFamily="@font/electrolize"
+            android:hint="Coloque a descrição do seu evento aqui"
+            android:paddingStart="@dimen/n10"
+            android:textColor="@color/vermelho4"
+            android:textColorHint="@color/vermelho4"
+            android:textSize="@dimen/ns20"
+            app:layout_constraintEnd_toStartOf="@id/conteudo_de_baixo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/evento_text" />
+
+        <TextView
+            android:id="@+id/valor_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/n2"
+            android:fontFamily="@font/electrolize"
+            android:hint="888 r$"
+            android:inputType="number"
+            android:paddingStart="@dimen/n10"
+            android:textColor="@color/vermelho4"
+            android:textColorHint="@color/vermelho4"
+            android:textSize="@dimen/ns20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descricao_text" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conteudo_de_baixo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/n10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/pago_nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/electrolize"
+                android:gravity="center"
+                android:text="Comprou:"
+                android:textColor="@color/vermelho4"
+                android:textColorHint="@color/vermelho4"
+                android:textSize="@dimen/ns16"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/pago_boolean"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/pago_boolean"
+                android:layout_width="@dimen/n40"
+                android:layout_height="@dimen/n40"
+                android:layout_marginTop="@dimen/n5"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pago_nome"
+                app:srcCompat="@drawable/ic_check_errado"
+                tools:ignore="VectorDrawableCompat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/data_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/n15"
+            android:layout_marginTop="@dimen/n2"
+            android:layout_marginEnd="@dimen/n30"
+            android:fontFamily="@font/electrolize"
+            android:hint="10/01/2020"
+            android:inputType="date"
+            android:textColor="@color/vermelho4"
+            android:textColorHint="@color/vermelho4"
+            android:textSize="@dimen/ns20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/conteudo_de_baixo"
+            app:layout_constraintStart_toEndOf="@id/valor_text"
+            app:layout_constraintTop_toBottomOf="@id/descricao_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

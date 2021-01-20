@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backgroundFundo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fundo_new_ui_card"
+    android:padding="@dimen/n5">
+
+    <LinearLayout
+        android:id="@+id/cabecario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtclose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:fontFamily="@font/audiowide"
+            android:gravity="center|end"
+            android:paddingEnd="@dimen/n10"
+            android:text="X"
+            android:textColor="@color/vermelho3"
+            android:textSize="@dimen/ns30"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cabecario"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/escolha_nome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/n10"
+                    android:layout_marginTop="@dimen/n10"
+                    android:layout_marginEnd="@dimen/n10"
+                    android:fontFamily="@font/electrolize"
+                    android:gravity="center"
+                    android:text="Deseja realmente sair da sua conta?"
+                    android:textColor="@color/vermelho3"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/ns30"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/logout_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/logout_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/n20"
+                    android:layout_marginTop="@dimen/n30"
+                    android:layout_marginEnd="@dimen/n20"
+                    android:layout_marginBottom="@dimen/n30"
+                    android:background="@drawable/fundo_button_ui_dark"
+                    android:fontFamily="@font/electrolize"
+                    android:gravity="center"
+                    android:padding="@dimen/n10"
+                    android:text="Logout"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ns30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/escolha_nome" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
